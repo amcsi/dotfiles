@@ -28,3 +28,6 @@ tmux() {
   fi
   $tmux_cmd "$@"
 }
+
+alias d=docker
+alias dc=docker-compose
