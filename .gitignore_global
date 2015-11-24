@@ -1,7 +1,17 @@
 *.swp
 *.swo
-*.stackdump
+Session.vim
+composer.phar
+.result*
+.dc*
+cachegrind.out*
+.bisect
+*.REMOTE.*
+*.LOCAL.*
+*.BACKUP.*
+*.BASE.*
 *.orig
+phpinfoo.php
 
 # Compiled source #
 ###################
@@ -36,6 +46,7 @@
 ######################
 .DS_Store?
 ehthumbs.db
+Icon?
 Thumbs.db
 Session.vim*
 *.vim*

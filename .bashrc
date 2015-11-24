@@ -1,20 +1,33 @@
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+
+# Show git changes in PS1
 export GIT_PS1_SHOWDIRTYSTATE=1
+# Show if there are stashed changes in PS1
 export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWCOLORHINTS="true"
 
-
-# Include git stuff
-if [ -f /etc/bash_completion.d/git-prompt.sh ]; then
-    . /etc/bash_completion.d/git-prompt.sh
+if [ -f ~/.git-prompt.sh ]; then
+    . ~/.git-prompt.sh
+    PROMPT_COMMAND="__git_ps1 '\u@\h:\w' '\\$ '"
+else
+    if [ -f /etc/bash_completion.d/git-prompt.sh ]; then
+        . /etc/bash_completion.d/git-prompt.sh
+    fi
+    if [ -f /etc/bash_completion.d/git-prompt ]; then
+        . /etc/bash_completion.d/git-prompt
+    fi
+    export PS1='\u@\h:\w\[\033[01;33m\]$(__git_ps1)\[\033[00m\]\$ '
 fi
-if [ -f /etc/bash_completion.d/git-prompt ]; then
-    . /etc/bash_completion.d/git-prompt
-fi
-
-export PS1='\u@\h:\w\[\033[01;33m\]$(__git_ps1)\[\033[00m\]\$ '	
 
 alias ls="ls --color=auto"
-#alias vim='gvim -v'
 
 tmux() {
   local tmux_cmd
@@ -29,5 +42,10 @@ tmux() {
   $tmux_cmd "$@"
 }
 
+export PATH="$PATH:~/.composer/vendor/bin"
+
 alias d=docker
 alias dc=docker-compose
+alias fuck='eval $(thefuck $(fc -ln -1))'
+# You can use whatever you want as an alias, like for Mondays:
+alias FUCK='fuck'

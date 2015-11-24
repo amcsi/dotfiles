@@ -1,15 +1,18 @@
 [user]
     name = "Attila Szeremi"
     email = "attila@szeremi.org"
-[push]
-    default = upstream
 [core]
     filemode = false
+    bare = false
+    logallrefupdates = true
+    editor = vim
     excludesfile = ~/.gitignore_global
     whitespace=fix,-indent-with-non-tab,-trailing-space,cr-at-eol,tabwidth=4
     pager = "less -x4"
 [advice]
     pushNonFastForward = false
+[push]
+    default = simple
 [color]
     ui = true
 [color "branch"]
@@ -47,5 +50,3 @@
 
 [merge]
     tool = vimdiff
-[mergetool "gvimdiff3"]
-    cmd = gvim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
