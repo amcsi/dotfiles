@@ -1,6 +1,6 @@
-[user]
-    name = "Attila Szeremi"
-    email = "attila@szeremi.org"
+[include]
+    # Add name details here
+    path = ~/.gitconfig_local
 [core]
     filemode = false
     bare = false
