@@ -1,6 +1,10 @@
 [include]
     # Add name details here
     path = ~/.gitconfig_local
+[user]
+    # These should go in your ~/.gitconfig_local file
+    #name = ""
+    #email = ""
 [core]
     filemode = false
     bare = false
