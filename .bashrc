@@ -29,6 +29,10 @@ fi
 
 alias ls="ls --color=auto"
 
+if hash fuck 2>/dev/null; then
+    eval $(thefuck --alias)
+fi
+
 tmux() {
   local tmux_cmd
   if ! tmux_cmd=$(which tmux); then
@@ -45,7 +49,4 @@ tmux() {
 export PATH="$PATH:~/.composer/vendor/bin"
 
 alias d=docker
-alias dc=docker-compose
-alias fuck='eval $(thefuck $(fc -ln -1))'
-# You can use whatever you want as an alias, like for Mondays:
-alias FUCK='fuck'
+alias dc='docker-compose --x-networking'
