@@ -85,3 +85,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias d=docker
 alias dc='docker-compose --x-networking'
+
+# PHPStorm bindings
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
