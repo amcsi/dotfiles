@@ -15,8 +15,6 @@
     pager = "less -x4"
 [advice]
     pushNonFastForward = false
-[push]
-    default = simple
 [color]
     ui = true
 [color "branch"]
