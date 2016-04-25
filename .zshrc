@@ -58,6 +58,11 @@ plugins=(colorize git laravel5 thefuck vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
+# Orginal PS1
+# export PS1='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+# Full path PS1
+  export PS1='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
