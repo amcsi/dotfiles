@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/attila/.oh-my-zsh
+  ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -45,23 +45,20 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+source $ZSH/oh-my-zsh.sh
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize git laravel5 thefuck vagrant)
+plugins=(colorize git git_prompt laravel5 thefuck vagrant)
 
 # User configuration
-
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin"
+  export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/usr/games:/usr/local/games:~/.composer/vendor/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # Orginal PS1
 # export PS1='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
-# Full path PS1
-  export PS1='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -94,3 +91,12 @@ alias dc='docker-compose --x-networking'
 # PHPStorm bindings
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
+
+# Local overrides
+if [[ -r $HOME/.local.zshrc ]]
+then
+    source $HOME/.local.zshrc
+fi
+
+# Show full path rather than just the last segment
+# export PS1=$(echo $PS1 | sed 's/%c\b/%~/g')
