@@ -56,3 +56,6 @@
 
 [merge]
     tool = vimdiff
+[oh-my-zsh]
+  # This hides the git prompt in oh-my-zsh
+  #hide-status = 1
