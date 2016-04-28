@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 plugins=(colorize git git_prompt laravel5 thefuck vagrant)
 
 # User configuration
-  export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/usr/games:/usr/local/games:~/.composer/vendor/bin:$PATH"
+  export PATH="$PATH:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/usr/games:/usr/local/games:~/.composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
