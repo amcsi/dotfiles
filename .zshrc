@@ -100,3 +100,6 @@ fi
 
 # Show full path rather than just the last segment
 # export PS1=$(echo $PS1 | sed 's/%c\b/%~/g')
+
+# http://stackoverflow.com/a/26069/1381550
+export LESS=-Ri
