@@ -50,3 +50,7 @@ export PATH="$PATH:~/.composer/vendor/bin"
 
 alias d=docker
 alias dc='docker-compose --x-networking'
+
+if [ -f ~/.bashrc.local ]; then
+    source ~/.bashrc.local
+fi
