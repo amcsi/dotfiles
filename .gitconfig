@@ -15,6 +15,7 @@
     pager = "less -x4"
     eol = lf
     autocrlf = input
+    ignorecase = false
 [advice]
     pushNonFastForward = false
 [push]
