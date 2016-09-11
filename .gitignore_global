@@ -6,10 +6,6 @@ composer.phar
 .dc*
 cachegrind.out*
 .bisect
-*.REMOTE.*
-*.LOCAL.*
-*.BACKUP.*
-*.BASE.*
 *.orig
 phpinfoo.php
 
