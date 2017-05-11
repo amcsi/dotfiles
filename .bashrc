@@ -50,6 +50,7 @@ export PATH="$PATH:~/.composer/vendor/bin"
 
 alias d=docker
 alias dc='docker-compose --x-networking'
+alias gsts='git stash show --text'
 
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
