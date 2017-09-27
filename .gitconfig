@@ -1,6 +1,3 @@
-[include]
-    # Add name details here
-    path = ~/.gitconfig_local
 [user]
     # These should go in your ~/.gitconfig_local file
     #name = ""
@@ -62,3 +59,6 @@
   #hide-status = 1
 [rerere]
     enabled = true
+[include]
+    # Add name details here
+    path = ~/.gitconfig_local
