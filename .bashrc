@@ -20,9 +20,23 @@ fast_git_ps1 ()
     printf -- "$(git branch 2>/dev/null | grep -e '\* ' | sed 's/^..\(.*\)/ (\1) /')"    
 }                                                                                            
 
+
+unamestr=`uname`
+if [[ "$unamestr" == MINGW* ]] ; then
+    my_ps1 ()
+    {
+        fast_git_ps1
+    }
+else
+    my_ps1 ()
+    {
+        __git_ps1
+    }
+fi
+
 if [ -f ~/.git-prompt.sh ]; then
     . ~/.git-prompt.sh
-    PROMPT_COMMAND="__git_ps1 '\u@\h:\w' '\\$ '"
+    PROMPT_COMMAND="my_ps1 '\u@\h:\w' '\\$ '"
 else
     if [ -f /etc/bash_completion.d/git-prompt.sh ]; then
         . /etc/bash_completion.d/git-prompt.sh
@@ -30,7 +44,7 @@ else
     if [ -f /etc/bash_completion.d/git-prompt ]; then
         . /etc/bash_completion.d/git-prompt
     fi
-    export PS1='\u@\h:\w\[\033[01;33m\]$(fast_git_ps1)\[\033[00m\]\$ '
+    export PS1='\u@\h:\w\[\033[01;33m\]$(my_ps1)\[\033[00m\]\$ '
 fi
 
 alias ls="ls --color=auto"
