@@ -13,6 +13,10 @@
     eol = lf
     autocrlf = input
     ignorecase = false
+    preloadindex = true
+    fscache = true
+[gc]
+    auto = 256
 [advice]
     pushNonFastForward = false
 [push]
