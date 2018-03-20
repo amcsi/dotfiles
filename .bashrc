@@ -75,3 +75,6 @@ alias gsts='git stash show --text'
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
 fi
+
+# Makes git bash on Windows integrated with PhpStorm work with accented chars
+export LC_CTYPE=C.UTF-8
