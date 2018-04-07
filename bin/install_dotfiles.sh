@@ -2,9 +2,23 @@
 set -e
 shopt -s dotglob
 
+################
+# For macOS, don't forget to run: brew install coreutils
+################
+
 dotfilesDir=$(dirname $(dirname $(realpath $0)))
 homeDir=$(realpath ~)
 vimfilesDir=$homeDir/vimfiles
+
+# Wrapper for cp to work in macOS.
+cp() {
+    if [ -x "$(command -v gcp)" ]; then
+        command=gcp
+    else
+        command=cp
+    fi
+    command $command "$@"
+}
 
 read -p "Install the dotfiles? " -n 1 -r
 echo    # (optional) move to a new line
