@@ -66,7 +66,7 @@ tmux() {
   $tmux_cmd "$@"
 }
 
-export PATH="$PATH:~/.composer/vendor/bin"
+export PATH="$PATH:~/.composer/vendor/bin:~/.config/composer/vendor/bin"
 
 alias d=docker
 alias dc='docker-compose --x-networking'
