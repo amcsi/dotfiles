@@ -55,6 +55,12 @@ plugins=(colorize git git_prompt laravel5 thefuck vagrant)
   export PATH="$PATH:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/usr/games:/usr/local/games:$HOME/.composer/vendor/bin:$HOME/.config/composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Local overrides
+if [[ -r $HOME/.local.zshrc ]]
+then
+    source $HOME/.local.zshrc
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # Orginal PS1
@@ -102,12 +108,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Local overrides
-if [[ -r $HOME/.local.zshrc ]]
-then
-    source $HOME/.local.zshrc
-fi
 
 # Show full path rather than just the last segment
 # export PS1=$(echo $PS1 | sed 's/%c\b/%~/g')
