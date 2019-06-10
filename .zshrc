@@ -92,6 +92,17 @@ alias dc='docker-compose --x-networking'
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
+# https://github.com/zsh-users/zsh-autosuggestions
+autoCompleteSource=$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -r $autoCompleteSource ]]
+then
+    source $autoCompleteSource
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Local overrides
 if [[ -r $HOME/.local.zshrc ]]
 then
@@ -103,3 +114,8 @@ fi
 
 # http://stackoverflow.com/a/26069/1381550
 export LESS=-Ri
+
+export NOTION_HOME="$HOME/.notion"
+[ -s "$NOTION_HOME/load.sh" ] && \. "$NOTION_HOME/load.sh"
+
+export PATH="${NOTION_HOME}/bin:$PATH"

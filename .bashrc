@@ -66,7 +66,7 @@ tmux() {
   $tmux_cmd "$@"
 }
 
-export PATH="$PATH:~/.composer/vendor/bin:~/.config/composer/vendor/bin"
+export PATH="$PATH:~/.composer/vendor/bin:~/.config/composer/vendor/bin:/opt/mssql-tools/bin"
 
 alias d=docker
 alias dc='docker-compose --x-networking'
@@ -78,3 +78,7 @@ fi
 
 # Makes git bash on Windows integrated with PhpStorm work with accented chars
 export LC_CTYPE=C.UTF-8
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
