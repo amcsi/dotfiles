@@ -63,6 +63,8 @@
   #hide-status = 1
 [rerere]
     enabled = true
+[rebase]
+    autosquash = true
 [include]
     # Add name details here
     path = ~/.gitconfig_local
