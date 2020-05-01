@@ -10,8 +10,8 @@ fi
 
 # Show git changes in PS1
 export GIT_PS1_SHOWDIRTYSTATE=1
-# Show if there are stashed changes in PS1
-export GIT_PS1_SHOWSTASHSTATE=1
+# Do not show stashed changes in PS1
+export GIT_PS1_SHOWSTASHSTATE=
 export GIT_PS1_SHOWCOLORHINTS="true"
 
 # https://stackoverflow.com/a/43142926/1381550
