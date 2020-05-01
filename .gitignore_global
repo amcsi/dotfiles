@@ -7,7 +7,7 @@ composer.phar
 cachegrind.out*
 .bisect
 *.orig
-phpinfoo.php
+phpinfoo*
 
 # Compiled source #
 ###################
