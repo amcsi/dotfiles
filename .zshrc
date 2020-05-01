@@ -115,7 +115,7 @@ export NVM_DIR="$HOME/.nvm"
 # http://stackoverflow.com/a/26069/1381550
 export LESS=-Ri
 
-export NOTION_HOME="$HOME/.notion"
-[ -s "$NOTION_HOME/load.sh" ] && \. "$NOTION_HOME/load.sh"
+export VOLTA_HOME="$HOME/.volta"
+[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
 
-export PATH="${NOTION_HOME}/bin:$PATH"
+export PATH="$VOLTA_HOME/bin:$PATH"
