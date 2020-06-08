@@ -116,6 +116,7 @@ export NVM_DIR="$HOME/.nvm"
 export LESS=-Ri
 
 export VOLTA_HOME="$HOME/.volta"
-[ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
-
-export PATH="$VOLTA_HOME/bin:$PATH"
+# Do export ENABLE_VOLTA=1 in .local.zshrc to enable volta.
+if [[ -n "$ENABLE_VOLTA" ]] then
+    [ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
+fi
