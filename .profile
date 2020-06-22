@@ -33,3 +33,8 @@ fi
 # To solve issue with PhpStorm stopping listening to keyboard events.
 # https://askubuntu.com/a/731548/176014
 export IBUS_ENABLE_SYNC_MODE=1
+
+dex() {
+    docker exec -it "$1" /bin/bash
+    echo "$1"
+}
