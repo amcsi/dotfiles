@@ -87,4 +87,5 @@ export VOLTA_HOME="$HOME/.volta"
 # Do export ENABLE_VOLTA=1 in .bashrc.local to enable volta.
 if [[ -n "$ENABLE_VOLTA" ]]; then
     [ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
+    export PATH="$VOLTA_HOME/bin:$PATH"
 fi
