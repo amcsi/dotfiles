@@ -52,6 +52,9 @@
     lgauto = log --color --graph --pretty=format:'%C(auto)%h -%d %s (%cr) <%an>' --abbrev-commit
     lg = log --color --graph --pretty=format:'%C(auto)%h%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lga = log --color --graph --pretty=format:'%C(auto)%h%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+    # non-relative dates
+    lgt = log --color --graph --pretty=format:'%C(auto)%h%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lgat = log --color --graph --pretty=format:'%C(auto)%h%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --all
 
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
