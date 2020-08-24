@@ -38,3 +38,5 @@ dex() {
     docker exec -it "$1" /bin/bash
     echo "$1"
 }
+
+export PATH="$HOME/.cargo/bin:$PATH"
