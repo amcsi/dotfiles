@@ -54,4 +54,5 @@ nbproject
 .bc
 /vendor
 .idea
+.idea.*
 node_modules/
