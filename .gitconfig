@@ -58,7 +58,9 @@
 
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-
+[log]
+    # Local timezone, ISO date format
+    date = format-local:%F %T
 [merge]
     tool = vimdiff
 [oh-my-zsh]
