@@ -20,7 +20,7 @@
 [advice]
     pushNonFastForward = false
 [push]
-    default = simple
+    default = current
 [color]
     ui = true
 [color "branch"]
