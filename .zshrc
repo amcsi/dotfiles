@@ -120,3 +120,5 @@ export VOLTA_HOME="$HOME/.volta"
 if [[ -n "$ENABLE_VOLTA" ]] then
     [ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
 fi
+
+source $HOME/.profile
