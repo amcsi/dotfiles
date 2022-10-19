@@ -77,6 +77,11 @@ alias d=docker
 alias dc='docker-compose --x-networking'
 alias gsts='git stash show --text'
 
+dex() {
+    docker exec -it "$1" /bin/bash
+    echo "$1"
+}
+
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
 fi
