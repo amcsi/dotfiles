@@ -122,3 +122,6 @@ if [[ -n "$ENABLE_VOLTA" ]] then
 fi
 
 source $HOME/.profile
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

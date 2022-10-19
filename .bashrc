@@ -99,3 +99,5 @@ if [[ -n "$ENABLE_VOLTA" ]]; then
     [ -s "$VOLTA_HOME/load.sh" ] && . "$VOLTA_HOME/load.sh"
     export PATH="$VOLTA_HOME/bin:$PATH"
 fi
+
+complete -C /usr/bin/terraform terraform
