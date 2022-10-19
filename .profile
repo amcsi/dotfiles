@@ -26,6 +26,9 @@ fi
 # https://askubuntu.com/a/731548/176014
 export IBUS_ENABLE_SYNC_MODE=1
 
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 dex() {
     docker exec -it "$1" /bin/bash
     echo "$1"
