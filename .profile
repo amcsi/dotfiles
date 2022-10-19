@@ -41,3 +41,7 @@ dex() {
 }
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/attila/.local/share/JetBrains/Toolbox/scripts"
